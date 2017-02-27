@@ -1,1 +1,1 @@
-java is a language.
+java is a programming language.
