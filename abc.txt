@@ -1,3 +1,5 @@
 java is a programming language.
 
 learn js.
+
+learn python
