@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="http://cdn.static.runoob.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <title>how to use ajax</title>
+    <script>
+    // function getContent(){
+    //     console.log('begin');
+    //     var xmlhttp = '';
+    //     if(window.XMLHttpRequest){
+    //         xmlhttp = new XMLHttpRequest();
+    //     }
+    //     else{
+    //         xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+    //     }
+    //     xmlhttp.onreadystatechange = function(){
+    //         if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+    //             console.log(xmlhttp.responseText);
+    //         }
+    //         else{
+    //             console.log("error");
+    //         }
+    //     }
+    //     xmlhttp.open("POST", "https://1z1x.vonbros.com/api/web/users/login", true);
+    //     xmlhttp.send("log_name=flyketch&log_password=f7c3bc1d808e04732adf679965ccc34ca7ae3441");
+    // }
+    $(document).ready(function(){
+        $('#my_button').click(function(){
+            console.log("beigin");
+            $.ajax({
+                type: "POST",
+                async: true,
+                url: "url",
+                contentType: "application/json; charset=utf-8",
+                dataType: "jsonp",
+                data: {},
+                timeout: 30000,
+                beforeSend: function(){
+                    console.log("before");
+                },
+                success: function(data){
+                    console.log(data);
+                },
+                complete: function(){
+                    console.log("complete");
+                },
+                error: function(){
+                    console.log("error");
+                }
+            });
+        });
+    });
+    
+    </script>
+</head>
+<body>
+    <div id="my_div">
+        <p>实用</p>
+    </div>
+    <button id="my_button" type="button">修改内容</button>
+</body>
+</html>
