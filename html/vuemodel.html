@@ -14,20 +14,31 @@
 
         <p>{{msg}}</p>
         <button v-on:click="reverseMsg">反转字符串</button>
+
+        <p>{{param | capitalize}}</p>
     </div>
     <script>
         new Vue({
             el: '#app',
             data:{
                 message: 'Runoob',
-                msg: 'Steve'
+                msg: 'Steve',
+                param: 'max',
             },
 
             methods:{
                 reverseMsg: function(){
                     this.msg = this.msg.split('').reverse().join('')
                 }
-            }
+            },
+
+            filters: {
+                capitalize: function(value){
+                    if(!value) return ''
+                    value = value.toString()
+                    return value.charAt(0).toUpperCase() + value.slice(1)
+                }
+            },
         });
     </script>
 </body>
