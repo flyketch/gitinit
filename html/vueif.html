@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="vue.min.js"></script>
+    <title>v-if</title>
+</head>
+<body>
+    <div id="app">
+        <p v-if="seen">现在可以看到我了。</p>
+        <template v-if="ok">
+            <h1>学习最快乐</h1>
+            <h2>出其不意攻其不备</h2>
+            <p>我们都是中国人</p>
+        </template>
+    </div>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                seen: true,
+                ok: true,
+            }
+        });
+    </script>
+</body>
+</html>
