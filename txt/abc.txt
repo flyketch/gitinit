@@ -7,3 +7,5 @@ learn python
 learn postgres
 
 at tianmen
+
+at office in jiaxing
