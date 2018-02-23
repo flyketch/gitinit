@@ -83,6 +83,57 @@ var d2 = 5
 Double(d2)/Double(d1)
 d2/d1
 
+func returnNest() -> Int{
+    var a = 10
+    func add5(){
+        a += 5
+    }
+    add5()
+    return a
+}
+returnNest()
+
+
+func makeIncrementer() ->((Int) -> Int){
+    func addOne(number: Int) -> Int{
+        return 1 + number
+    }
+    
+    return addOne
+}
+var increment = makeIncrementer()
+increment(7)
+
+
+func hasAnyMatches(list: [Int], condition: (Int) -> Bool) -> Int{
+    var number = 0
+    for item in list {
+        if condition(item){
+            number += 1
+        }
+    }
+    return number
+}
+func lessThanTen(number: Int) -> Bool{
+    return number < 10
+}
+var lists = [1, 2, 3, 4]
+hasAnyMatches(list: lists, condition: lessThanTen)
+
+
+func lessThanTen2(lists: [Int]) -> Int{
+    var num = 0;
+    for item in lists {
+        if item < 10 {
+            num += 1
+        }
+    }
+    return num
+}
+lessThanTen2(lists: [1, 20, 10])
+
+
+
 
 
 
