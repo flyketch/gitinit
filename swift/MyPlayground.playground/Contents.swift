@@ -175,6 +175,15 @@ class extendShape: Shape{
         number = 4
     }
     
+    var anotherVal: Double{
+        get{
+            return 2.0 * shapeDobule
+        }
+        set{
+            shapeDobule = newValue / 2.0
+        }
+    }
+    
     override func goToShape() -> String{
         return "the shape name is \(name), and number is \(number)"
     }
@@ -182,5 +191,34 @@ class extendShape: Shape{
 let extendsSh = extendShape(sd: 99.00, name: "Max")
 extendsSh.goToShape()
 extendsSh.shapeDobule
+extendsSh.anotherVal
+extendsSh.anotherVal = 120
+extendsSh.shapeDobule
+
+
+enum Rank: Int {
+    case ace = 1
+    case two, three, four, five, six, seven, eight, nine, ten
+    case jack, queen, king
+    func simpleDescription() -> String {
+        switch self {
+        case .ace:
+            return "ace"
+        case .jack:
+            return "jack"
+        case .queen:
+            return "queen"
+        case .king:
+            return "king"
+        default:
+            return String(self.rawValue)
+        }
+    }
+}
+let ace = Rank.king
+let aceRawValue = ace.rawValue
+
+
+
 
 
