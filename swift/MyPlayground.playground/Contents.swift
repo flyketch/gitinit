@@ -141,14 +141,46 @@ numbers.map({
     return result
 })
 
+let mappedNumbers = numbers.map({number in 3 * number})
+print(mappedNumbers)
+
+let sortNumbers = numbers.sorted{$0 > $1}
+print(sortNumbers)
 
 
+class Shape{
+    var number: Int = 0
+    var name: String
+    
+    init(sname: String){
+        self.name = sname
+    }
+    
+    func goToShape() -> String{
+        return "the shape name is \(name), and number is \(number)"
+    }
+}
+let ss = Shape(sname: "Steve")
+ss.goToShape()
+ss.name
+ss.number
 
 
-
-
-
-
-
+class extendShape: Shape{
+    var shapeDobule: Double
+    
+    init(sd: Double, name: String){
+        self.shapeDobule = sd
+        super.init(sname: name)
+        number = 4
+    }
+    
+    override func goToShape() -> String{
+        return "the shape name is \(name), and number is \(number)"
+    }
+}
+let extendsSh = extendShape(sd: 99.00, name: "Max")
+extendsSh.goToShape()
+extendsSh.shapeDobule
 
 
