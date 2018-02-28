@@ -15,10 +15,14 @@ if let name = optionString{
 
 var total = 0
 for i in 0..<4{
+    print(i)
     total += i
 }
 print(total)
 
+for i in 1...6 {
+    print(i)
+}
 
 func greet(person: String, day: String) -> String{
     return "Hello \(person), today is \(day)."
@@ -217,6 +221,26 @@ enum Rank: Int {
 }
 let ace = Rank.king
 let aceRawValue = ace.rawValue
+
+let x: (w: String, n: Int, v: Double) = ("hello", 10, 2.24)
+let(word, number, value) = x
+print(word)
+print(number)
+print(value)
+print(x.w)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
