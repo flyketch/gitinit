@@ -201,7 +201,7 @@ extendsSh.shapeDobule
 
 
 enum Rank: Int {
-    case ace = 1
+    case ace = 10
     case two, three, four, five, six, seven, eight, nine, ten
     case jack, queen, king
     func simpleDescription() -> String {
@@ -213,7 +213,7 @@ enum Rank: Int {
         case .queen:
             return "queen"
         case .king:
-            return "king"
+            return "kings"
         default:
             return String(self.rawValue)
         }
