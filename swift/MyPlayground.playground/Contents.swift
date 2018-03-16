@@ -229,7 +229,9 @@ print(number)
 print(value)
 print(x.w)
 
-
+let sstr = "test"
+typealias s = sstr
+s
 
 
 
