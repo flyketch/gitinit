@@ -230,10 +230,20 @@ print(value)
 print(x.w)
 
 let sstr = "test"
-typealias s = sstr
-s
 
+var anotherThreeDoubles = Array(repeating: 2.5, count: 3)
 
+let base = 2
+let power = 10
+var answer = 1
+var result = 0
+for i in 1...power {
+    answer *= base
+    result += i*base
+    print(result)
+}
+print(answer)
+print(result)
 
 
 
