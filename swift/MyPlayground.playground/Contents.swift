@@ -295,7 +295,9 @@ case .west:
     print("Where the skies are blue")
 }
 
+let strArray = ["xiaoming","xiaohong","xiaoluo"]
 
+let strsss = strArray.joined(separator: ".")
 
 
 
