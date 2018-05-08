@@ -15,7 +15,7 @@ if let name = optionString{
 
 var total = 0
 for i in 0..<4{
-    print(i)
+    print("\(i)")
     total += i
 }
 print(total)
@@ -299,7 +299,30 @@ let strArray = ["xiaoming","xiaohong","xiaoluo"]
 
 let strsss = strArray.joined(separator: ".")
 
+struct Address {
+    var a: String?
+}
 
+let address: Address!
+
+address = Address()
+if address.a != "" {
+    print("address is nil")
+}else {
+    print("address is not nil")
+}
+
+var aas: String?
+
+if let _ = aas {
+    print("yes")
+}
+else {
+    print("no")
+}
+
+let asbf = "abc bcd efg"
+let aassd = asbf.split(separator: " ")
 
 
 
