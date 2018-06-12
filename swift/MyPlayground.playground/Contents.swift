@@ -339,3 +339,6 @@ for arrayIndex in stride(from: names.count - 1, through: 0, by: -1) {
 
 print("\(reversedNames)")
 
+let myreturn = "退款金额：¥ 699.00"
+let returnIndex = myreturn.index(of: "¥")
+let returnres = myreturn[returnIndex!..<myreturn.endIndex]
