@@ -1,5 +1,1 @@
-this is abc.txt
-
-hello nodejs.
-
-gotochina
+this is abc.txt hello nodejs. gotochina
