@@ -1,6 +1,6 @@
 # gitinit
 
-git init in jiaxin、hanghzou
+git init in jiaxin、hangzhou
 
 study git.
 
